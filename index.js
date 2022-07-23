@@ -75,6 +75,22 @@ function scrollAnimation() {
 }
 
 function down() {
-  window.scrollTo({ top: 3900, behavior: 'smooth' })
+  window.scrollTo({ top: 2600, behavior: 'smooth' })
 }
-// DICE JS
+
+// about me text
+const spans = document.querySelectorAll('.word span');
+
+spans.forEach((span, idx) => {
+  span.addEventListener('click', (e) => {
+    e.target.classList.add('active');
+  });
+  span.addEventListener('animationend', (e) => {
+    e.target.classList.remove('active');
+  });
+  
+  // Initial animation
+  setTimeout(() => {
+    span.classList.add('active');
+  }, 750 * (idx+1))
+});
