@@ -12,8 +12,8 @@ let count2 = 0;
 function playAgain() {
     let randomNumber1 = Math.floor(Math.random() * 6) +1;
     let randomNumber2 = Math.floor(Math.random() * 6) +1;
-    let randomImages = "/images/dice" + randomNumber1 + ".png";
-    let randomImages2 = "/images/dice" + randomNumber2 + ".png";
+    let randomImages = "dice" + randomNumber1 + ".png";
+    let randomImages2 = "dice" + randomNumber2 + ".png";
 
     document.querySelectorAll("img")[0].setAttribute("src", randomImages);
 
